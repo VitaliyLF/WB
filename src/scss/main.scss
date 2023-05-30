@@ -4,5 +4,10 @@
 @import "fonts";
 @import "settings";
 
-// подключения компонентов страницы
+// подключения блок компонентов страницы
+@import "./components/nav";
+@import "./components/btn";
+
+// подключения основных компонентов  страницы
 @import "./components/header";
+@import "./components/hero";

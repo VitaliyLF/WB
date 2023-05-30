@@ -2,11 +2,35 @@
 // colors
 :root {
   // base
-  --font-family: "Open Sans", sans-serif;
-  --content-width: 1170px;
+  --font-family: "Gilroy", sans-serif;
+  --second-family: "DelaGothicOne", sans-serif;
+  --content-width: 1180px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
+  --content-fluid-width: 1380px;
+  --container-fluid-offset: 15px;
+  --container-fluid-width: calc(
+    var(--content-fluid-width) + (var(--container-fluid-offset) * 2)
+  );
+
   // colors
-  --light-color: #fff;
+  --light-color: #ffffff;
+  --accent-color: #21093a;
+  --disco-color: #961975;
+  --razzmatazz-color: #e1016e;
+  --loulou-color: #5f0b57;
+
+  //gradient
+  --main-gradient: linear-gradient(to left, #e5006d, #4c217a, #dc046d);
+  --stroke-gradient-black: linear-gradient(
+    to left,
+    rgba(229, 0, 109, 0),
+    rgba(76, 33, 122, 0),
+    rgba(220, 4, 109, 0)
+  );
+  --stroke-gradient-light: linear-gradient(to left, #ffffff, #f2f2f2);
+
+  //animation
+  --animation-primary: cubic-bezier(0.7, 0, 0.3, 1);
 }

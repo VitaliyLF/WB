@@ -1,0 +1,12 @@
+.header {
+  padding: 16px 0;
+  background-color: var(--accent-color);
+
+  &__container {
+    @include flex-all-sb;
+  }
+
+  &__btn {
+    max-width: 180px;
+  }
+}
