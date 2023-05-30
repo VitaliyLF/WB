@@ -1,5 +1,5 @@
 @mixin kf-shine {
-  @keyframes shine {
+  @keyframes kf-shine {
     0% {
       transform: translate(-100%, -25%) rotate(10deg);
     }
@@ -13,7 +13,7 @@
 }
 
 @mixin kf-updown {
-  @keyframes updown {
+  @keyframes kf-updown {
     50% {
       transform: translateY(-20px);
     }
@@ -25,7 +25,7 @@
 }
 
 @mixin kf-pulse {
-  @keyframes pulse {
+  @keyframes kf-pulse {
     from {
       transform: scale(1);
       transform-origin: center center;
@@ -50,13 +50,25 @@
   }
 }
 
-@mixin fk-fillAnimation {
-  @keyframes fillAnimation {
+@mixin kf-scale {
+  @keyframes kf-scale {
     0% {
       transform: scaleX(0);
     }
     100% {
       transform: scaleX(1);
+    }
+  }
+}
+
+@mixin kf-rotating {
+  @keyframes kf-rotating {
+    0% {
+      transform: rotate(0);
+    }
+
+    100% {
+      transform: rotate(360deg);
     }
   }
 }

@@ -1,0 +1,53 @@
+.nav {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    @include mr(30px);
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--light-color);
+  }
+
+  &__link {
+    position: relative;
+    overflow: hidden;
+    color: currentColor;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 1px;
+      border-radius: 2px;
+      background-color: var(--razzmatazz-color);
+      opacity: 0;
+      transform-origin: left center;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    &:focus {
+      outline: 2px solid var(--disco-color);
+      outline-offset: 4px;
+    }
+
+    @include hover {
+      &::after {
+        @include kf-scale;
+
+        opacity: 1;
+        animation: kf-scale 0.3s linear forwards;
+        transform: scaleX(1);
+      }
+    }
+
+    &:active {
+      color: var(--razzmatazz-color);
+    }
+  }
+}
