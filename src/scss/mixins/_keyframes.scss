@@ -1,4 +1,4 @@
-@mixin shine {
+@mixin kf-shine {
   @keyframes shine {
     0% {
       transform: translate(-100%, -25%) rotate(10deg);
@@ -12,7 +12,7 @@
   }
 }
 
-@mixin updown {
+@mixin kf-updown {
   @keyframes updown {
     50% {
       transform: translateY(-20px);
@@ -24,7 +24,7 @@
   }
 }
 
-@mixin pulse {
+@mixin kf-pulse {
   @keyframes pulse {
     from {
       transform: scale(1);
@@ -50,7 +50,7 @@
   }
 }
 
-@mixin fillAnimation {
+@mixin fk-fillAnimation {
   @keyframes fillAnimation {
     0% {
       transform: scaleX(0);
