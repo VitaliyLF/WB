@@ -1,0 +1,11 @@
+.program {
+  background-color: var(--light-color);
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__accordion {
+    @include mb(30px);
+  }
+}

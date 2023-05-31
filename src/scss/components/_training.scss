@@ -1,5 +1,4 @@
 .training {
-  padding-bottom: 100px;
   background-color: var(--light-color);
 
   &__container {
@@ -23,19 +22,24 @@
     z-index: 1;
 
     &::after {
-      @include kf-updown;
-
       content: "";
       position: absolute;
       top: 0;
       left: 0;
-      width: 117px;
-      height: 117px;
+      width: 80px;
+      height: 80px;
       background-color: var(--accent-color);
       opacity: 0.6;
       filter: blur(30px);
       z-index: -1;
-      animation: kf-updown 4s ease-in-out infinite;
+    }
+
+    @include hover {
+      &::after {
+        @include kf-zoom;
+
+        animation: kf-zoom 4s infinite;
+      }
     }
   }
 
