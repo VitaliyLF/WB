@@ -50,13 +50,27 @@
   }
 }
 
-@mixin kf-scale {
-  @keyframes kf-scale {
+@mixin kf-scaleX {
+  @keyframes kf-scaleX {
     0% {
       transform: scaleX(0);
     }
     100% {
       transform: scaleX(1);
+    }
+  }
+}
+
+@mixin kf-scaleY {
+  @keyframes kf-scaleY {
+    0% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(0.5);
+    }
+    100% {
+      transform: scaleY(1);
     }
   }
 }

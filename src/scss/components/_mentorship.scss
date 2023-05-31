@@ -1,0 +1,55 @@
+.mentorship {
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    padding: 18px;
+    padding-top: 120px;
+    background-color: var(--light-color);
+    border: 3px solid var(--selago-color);
+    box-shadow: 5px 10px 20px rgba(48, 3, 53, 0.1);
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: 80px 80px;
+    background-position: top 20px right 20px;
+
+    &--spec {
+      background-image: url(../img/spec.svg);
+      grid-column: 7 span;
+    }
+
+    &--seller {
+      background-image: url(../img/seller.svg);
+      grid-column: 5 span;
+    }
+
+    &--newbies {
+      background-image: url(../img/newbies.svg);
+      grid-column: 5 span;
+    }
+
+    &--managers {
+      background-image: url(../img/managers.svg);
+      grid-column: 7 span;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 20px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    color: var(--meteorite-color);
+  }
+
+  &__descr {
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: var(--violet-color);
+  }
+}

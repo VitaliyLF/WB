@@ -1,7 +1,39 @@
 .hero {
+  position: relative;
   padding-top: 60px;
   padding-bottom: 146px;
-  background-color: var(--accent-color);
+  min-height: 757px;
+  background-color: var(--violet-color);
+
+  &::after {
+    @include kf-scaleY;
+
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 250px;
+    height: 250px;
+    opacity: 0.5;
+    filter: blur(150px);
+    background-color: var(--accent-color);
+    animation: kf-scaleY 3s ease-in-out infinite;
+  }
+
+  &::before {
+    @include kf-scaleY;
+
+    content: "";
+    position: absolute;
+    top: 150px;
+    right: 100px;
+    width: 430px;
+    height: 430px;
+    opacity: 0.5;
+    filter: blur(150px);
+    background-color: var(--accent-color);
+    animation: kf-scaleY 4s ease-in-out infinite;
+  }
 
   &__container {
     position: relative;
@@ -9,7 +41,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: -150px;
+      top: -155px;
       right: -40px;
       width: 580px;
       height: 852px;
@@ -100,6 +132,7 @@
   }
 
   &__subtitle {
+    margin: 0;
     margin-bottom: 4px;
     font-weight: 400;
     font-size: 18px;
