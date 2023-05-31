@@ -111,3 +111,23 @@ a {
 .page--ios .dis-scroll {
   position: relative;
 }
+
+.section-offset {
+  padding: 100px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 58px;
+  text-transform: uppercase;
+  color: var(--meteorite-color);
+}

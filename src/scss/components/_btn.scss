@@ -17,7 +17,7 @@
     background-position 0.3s var(--animation-primary);
 
   @include hover {
-    border-color: var(--razzmatazz-color);
+    border-color: var(--accent-color);
     background-position: right;
   }
 
@@ -48,7 +48,7 @@
 
     &-light {
       background-image: var(--stroke-gradient-light);
-      color: var(--accent-color);
+      color: var(--violet-color);
       transition: color 0.3s ease;
 
       @include hover {
