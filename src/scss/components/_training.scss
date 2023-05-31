@@ -1,0 +1,71 @@
+.training {
+  padding-bottom: 100px;
+  background-color: var(--light-color);
+
+  &__container {
+    padding: 48px 116px 62px;
+    background: #21093a;
+    border-radius: 20px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    color: var(--light-color);
+  }
+
+  &__item {
+    position: relative;
+    min-height: 200px;
+    padding: 24px 20px;
+    border: 1px solid var(--accent-color);
+    border-radius: 16px;
+    grid-column: 6 span;
+    z-index: 1;
+
+    &::after {
+      @include kf-updown;
+
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 117px;
+      height: 117px;
+      background-color: var(--accent-color);
+      opacity: 0.6;
+      filter: blur(30px);
+      z-index: -1;
+      animation: kf-updown 4s ease-in-out infinite;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 24px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    color: var(--selago-color);
+  }
+
+  &__descr {
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: var(--selago-color);
+  }
+
+  &__sublist {
+    padding-top: 7px;
+    padding-left: 24px;
+  }
+
+  &__subitem {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: var(--selago-color);
+  }
+}
