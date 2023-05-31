@@ -1,0 +1,225 @@
+.accordion {
+  padding: 20px;
+  background-color: var(--light-color);
+  border: 1px solid var(--selago-color);
+  box-shadow: 5px 10px 20px rgba(48, 3, 53, 0.1);
+  border-radius: 20px;
+
+  &__top {
+    margin-bottom: 16px;
+    max-width: 100%;
+    width: 100%;
+    padding-right: 80px;
+    display: inline-flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--selago-color);
+    background-repeat: no-repeat;
+    background-size: 80px 80px;
+    background-position: right bottom 16px;
+    background-image: url(../img/accordion-icon-1.svg);
+  }
+
+  &__module {
+    margin-bottom: 15px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--accent-color);
+  }
+
+  &__title {
+    margin-bottom: 22px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+    color: var(--violet-color);
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__topics {
+    padding-top: 20px;
+    padding-bottom: 58px;
+    margin-right: 20px;
+  }
+
+  &__topics-subtitle {
+    margin: 0;
+    margin-bottom: 12px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    color: var(--violet-color);
+  }
+
+  &__topics-list {
+    margin-bottom: 10px;
+  }
+
+  &__topics-item {
+    @include mb(10px);
+
+    position: relative;
+    padding-left: 28px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: var(--violet-color);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      background-color: var(--accent-color);
+    }
+  }
+
+  &__topics-week {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--accent-color);
+  }
+
+  &__result {
+    max-width: 504px;
+    padding: 20px;
+    background-color: var(--accent-color);
+    border-radius: 16px;
+  }
+
+  &__result-subtitle {
+    margin: 0;
+    margin-bottom: 15px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    color: var(--light-color);
+  }
+
+  &__result-item {
+    @include mb(10px);
+
+    position: relative;
+    padding-left: 36px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: var(--light-color);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-image: url(../img/accordion-checkbox.svg);
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &__control {
+    position: relative;
+    max-width: 110px;
+    padding-right: 20px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--purple-color);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      background-image: url(../img/arrow-down.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      transition: rotate 0.3s ease, transform 0.3s ease;
+    }
+  }
+
+  &--2 {
+    .accordion__top {
+      background-image: url(../img/accordion-icon-2.svg);
+    }
+
+    .accordion__module {
+      color: var(--electric-color);
+    }
+
+    .accordion__topics-item {
+      &::before {
+        background-color: var(--electric-color);
+      }
+    }
+
+    .accordion__topics-week {
+      color: var(--electric-color);
+    }
+
+    .accordion__result {
+      background-color: var(--electric-color);
+    }
+  }
+
+  &--3 {
+    .accordion__top {
+      background-image: url(../img/accordion-icon-3.svg);
+    }
+  }
+
+  &--4 {
+    .accordion__top {
+      background-image: url(../img/accordion-icon-4.svg);
+    }
+
+    .accordion__module {
+      color: var(--electric-color);
+    }
+
+    .accordion__topics-item {
+      &::before {
+        background-color: var(--electric-color);
+      }
+    }
+
+    .accordion__topics-week {
+      color: var(--electric-color);
+    }
+
+    .accordion__result {
+      background-color: var(--electric-color);
+    }
+  }
+}
+
+.is-open .accordion__content {
+  padding: 0;
+  opacity: 1;
+}
+
+.accordion__control.active {
+  &::after {
+    transform: rotate(180deg) translateY(50%);
+  }
+}

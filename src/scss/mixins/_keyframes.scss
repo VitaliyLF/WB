@@ -75,6 +75,20 @@
   }
 }
 
+@mixin kf-zoom {
+  @keyframes kf-zoom {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
 @mixin kf-rotating {
   @keyframes kf-rotating {
     0% {
