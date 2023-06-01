@@ -1,0 +1,44 @@
+.speaker {
+  background-color: var(--light-color);
+
+  &__info {
+    @include flex-all-sb;
+  }
+
+  &__content {
+    max-width: 680px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 58px;
+    text-transform: uppercase;
+    color: var(--violet-color);
+  }
+
+  &__item {
+    @include mb(20px);
+
+    position: relative;
+    padding-left: 28px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: var(--violet-color);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      background: var(--accent-color);
+      border-radius: 4px;
+    }
+  }
+}
