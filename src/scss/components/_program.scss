@@ -5,6 +5,10 @@
     margin-bottom: 40px;
   }
 
+  &__accordions {
+    margin-bottom: 100px;
+  }
+
   &__accordion {
     @include mb(30px);
   }
