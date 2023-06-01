@@ -1,12 +1,13 @@
 .accordion {
   padding: 20px;
+  padding-top: 25px;
   background-color: var(--light-color);
   border: 1px solid var(--selago-color);
   box-shadow: 5px 10px 20px rgba(48, 3, 53, 0.1);
   border-radius: 20px;
 
   &__top {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     max-width: 100%;
     width: 100%;
     padding-right: 80px;
@@ -20,7 +21,7 @@
   }
 
   &__module {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     font-family: var(--second-family);
     font-weight: 400;
     font-size: 16px;
@@ -75,9 +76,8 @@
     &::before {
       content: "";
       position: absolute;
-      top: 50%;
+      top: 8px;
       left: 0;
-      transform: translateY(-50%);
       width: 14px;
       height: 14px;
       border-radius: 3px;
@@ -111,10 +111,10 @@
   }
 
   &__result-item {
-    @include mb(10px);
+    @include mb(20px);
 
     position: relative;
-    padding-left: 36px;
+    padding-left: 40px;
     font-weight: 400;
     font-size: 18px;
     line-height: 23px;

@@ -23,6 +23,9 @@
 // Реализация бургер-меню
 // import { burger } from './functions/burger';
 
+// Подключение аккордеона
+// import {Accordion} from '../functions/accordion';
+
 // Реализация остановки скролла (не забудьте вызвать функцию)
 // import { disableScroll } from './functions/disable-scroll';
 
