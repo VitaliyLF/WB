@@ -12,4 +12,8 @@
   &__accordion {
     @include mb(30px);
   }
+
+  .apply {
+    max-width: 100%;
+  }
 }

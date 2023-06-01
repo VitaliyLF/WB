@@ -47,13 +47,10 @@
     }
 
     &-light {
-      background-image: var(--stroke-gradient-light);
+      max-width: 188px;
+      background-image: none;
       color: var(--violet-color);
-      transition: color 0.3s ease;
-
-      @include hover {
-        color: var(--light-color);
-      }
+      border: 1px solid var(--disco-color);
     }
 
     @include hover {
