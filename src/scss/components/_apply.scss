@@ -74,6 +74,11 @@
     font-size: 18px;
     line-height: 23px;
     color: var(--light-color);
+
+    &::placeholder {
+      color: var(--light-color);
+      opacity: 0.5;
+    }
   }
 
   &__btn {
@@ -93,5 +98,94 @@
   &__link {
     color: currentColor;
     text-decoration: underline;
+  }
+
+  &__info {
+    margin: 0;
+    margin-top: 12px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--light-color);
+    opacity: 0.6;
+  }
+
+  .choices {
+    width: 100%;
+  }
+
+  .choices__placeholder {
+    opacity: 0.5;
+  }
+
+  .choices__inner {
+    margin: 0;
+    padding: 0;
+    height: 47px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--accent-color);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: var(--light-color);
+  }
+
+  .choices[data-type*="select-one"] .choices__inner {
+    padding-bottom: 0;
+  }
+
+  .choices__list--single {
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .choices__list--dropdown .choices__item--selectable::after,
+  .choices__list[aria-expanded] .choices__item--selectable::after {
+    opacity: 0;
+  }
+
+  .choices__list--dropdown,
+  .choices__list[aria-expanded] {
+    background-color: var(--violet-color);
+    border: 1px solid var(--accent-color);
+  }
+
+  .choices__list--dropdown .choices__item,
+  .choices__list[aria-expanded] .choices__item {
+    padding: 10px;
+    border: 1px solid var(--accent-color);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: var(--light-color);
+  }
+
+  .choices__list--dropdown .choices__item--selectable.is-highlighted,
+  .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+    background-color: transparent;
+    color: var(--accent-color);
+  }
+
+  .choices[data-type*="select-one"]::after {
+    margin-top: 0;
+    right: 0;
+    transform: translateY(-50%);
+    border: none;
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/arrow-down-form.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease, margin-top 0.3s ease;
+    will-change: margin-top;
+  }
+
+  .choices[data-type*="select-one"].is-open::after {
+    margin-top: -12px;
+    transform: rotate(180deg) translateY(-50%);
   }
 }

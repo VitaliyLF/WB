@@ -3,7 +3,7 @@ import {
 } from '../functions/accordion';
 
 const programAccordions = document.querySelector('.program__accordions');
-const answersAccordions = document.querySelector('.answers__accordion');
+const answersAccordions = document.querySelector('.answers__accordions');
 
 if (programAccordions) {
   const accordion1 = new Accordion('.accordion--1', {

@@ -1,12 +1,20 @@
 .tariffs {
   background-color: var(--selago-color);
 
+  .swiper {
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
   &__title {
     margin-bottom: 40px;
   }
 
-  &__item {
-    grid-column: 4 span;
+  &__info {
+    height: 100%;
     padding: 20px;
     background-color: var(--light-color);
     border: 1px solid var(--selago-color);
@@ -47,7 +55,7 @@
         color: var(--light-color);
       }
 
-      .tariffs__subitem {
+      .tariffs__item {
         color: var(--light-color);
       }
 
@@ -88,7 +96,7 @@
     margin-bottom: 30px;
   }
 
-  &__sublist {
+  &__list {
     @include mb(20px);
   }
 
@@ -101,7 +109,7 @@
     color: var(--violet-color);
   }
 
-  &__subitem {
+  &__item {
     @include mb(14px);
 
     position: relative;
