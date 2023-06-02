@@ -3,10 +3,27 @@
 
   &__info {
     @include flex-all-sb;
+
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 40px;
+      transform: translateY(-50%);
+      width: 467px;
+      height: 467px;
+      background-color: var(--electric-color);
+      filter: blur(85px);
+      border-radius: 100%;
+      z-index: -1;
+    }
   }
 
   &__content {
-    max-width: 680px;
+    max-width: 650px;
   }
 
   &__title {
@@ -40,5 +57,9 @@
       background: var(--accent-color);
       border-radius: 4px;
     }
+  }
+
+  &__image {
+    display: block;
   }
 }

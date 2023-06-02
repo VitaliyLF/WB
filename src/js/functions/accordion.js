@@ -3,13 +3,15 @@ class Accordion {
     let defaultOptions = {
       isOpen: () => {},
       isClose: () => {},
-      speed: 300
+      speed: 300,
+      isControlEnabled: true
     };
 
     this.options = Object.assign(defaultOptions, options);
     this.accordion = document.querySelector(selector);
     this.control = this.accordion.querySelector('.accordion__control');
     this.content = this.accordion.querySelector('.accordion__content');
+    this.isControlEnabled = this.options.isControlEnabled;
     this.event();
     this.start();
   }
@@ -20,8 +22,10 @@ class Accordion {
         this.close();
       } else {
         this.open();
-        this.control.classList.add('active');
-        this.control.textContent = 'Свернуть';
+        if (this.isControlEnabled) {
+          this.control.classList.add('active');
+          this.control.textContent = 'Свернуть';
+        }
       }
     }
   }
@@ -33,12 +37,16 @@ class Accordion {
 
         if (this.accordion.classList.contains('is-open')) {
           this.open();
-          this.control.classList.add('active');
-          this.control.textContent = 'Свернуть';
+          if (this.isControlEnabled) {
+            this.control.classList.add('active');
+            this.control.textContent = 'Свернуть';
+          }
         } else {
           this.close();
-          this.control.classList.remove('active');
-          this.control.textContent = 'Подробнее';
+          if (this.isControlEnabled) {
+            this.control.classList.remove('active');
+            this.control.textContent = 'Подробнее';
+          }
         }
       });
     }
