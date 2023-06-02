@@ -1,11 +1,4 @@
 .accordion {
-  padding: 20px;
-  padding-top: 25px;
-  background-color: var(--light-color);
-  border: 1px solid var(--selago-color);
-  box-shadow: 5px 10px 20px rgba(48, 3, 53, 0.1);
-  border-radius: 20px;
-
   &__top {
     margin-bottom: 14px;
     max-width: 100%;
@@ -133,31 +126,6 @@
     }
   }
 
-  &__control {
-    position: relative;
-    max-width: 110px;
-    padding-right: 20px;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 18px;
-    color: var(--purple-color);
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
-      width: 16px;
-      height: 16px;
-      background-image: url(../img/arrow-down.svg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      transition: rotate 0.3s ease, transform 0.3s ease;
-    }
-  }
-
   &--2 {
     .accordion__top {
       background-image: url(../img/accordion-icon-2.svg);
@@ -210,16 +178,5 @@
     .accordion__result {
       background-color: var(--electric-color);
     }
-  }
-}
-
-.is-open .accordion__content {
-  padding: 0;
-  opacity: 1;
-}
-
-.accordion__control.active {
-  &::after {
-    transform: rotate(180deg) translateY(50%);
   }
 }
