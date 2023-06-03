@@ -8,6 +8,17 @@
   border-radius: 20px;
   z-index: 1;
 
+  @include tablet {
+    padding: 48px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include mobile {
+    padding: 20px;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -34,6 +45,15 @@
     z-index: -1;
   }
 
+  &__content {
+    margin-right: 30px;
+
+    @include tablet {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+
   &__title {
     margin: 0;
     margin-bottom: 20px;
@@ -43,6 +63,17 @@
     line-height: 58px;
     text-transform: uppercase;
     color: var(--light-color);
+
+    @include small-tablet {
+      font-size: 32px;
+      line-height: 48px;
+      text-align: center;
+    }
+
+    @include mobile {
+      font-size: 20px;
+      line-height: 29px;
+    }
   }
 
   &__descr {
@@ -52,6 +83,13 @@
     font-size: 18px;
     line-height: 23px;
     color: var(--light-color);
+
+    @include small-tablet {
+      max-width: 100%;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: center;
+    }
   }
 
   &__form {
@@ -79,6 +117,15 @@
       color: var(--light-color);
       opacity: 0.5;
     }
+
+    &:focus {
+      outline: 2px solid var(--disco-color);
+      outline-offset: 4px;
+    }
+
+    &:active {
+      color: var(--accent-color);
+    }
   }
 
   &__btn {
@@ -98,6 +145,15 @@
   &__link {
     color: currentColor;
     text-decoration: underline;
+
+    &:focus {
+      outline: 2px solid var(--light-color);
+      outline-offset: 4px;
+    }
+
+    &:active {
+      color: var(--accent-color);
+    }
   }
 
   &__info {
@@ -112,6 +168,15 @@
 
   .choices {
     width: 100%;
+
+    &:focus {
+      outline: 2px solid var(--disco-color);
+      outline-offset: 4px;
+    }
+
+    &:active {
+      color: var(--accent-color);
+    }
   }
 
   .choices__placeholder {

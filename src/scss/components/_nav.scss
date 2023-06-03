@@ -1,6 +1,33 @@
 .nav {
+  @include tablet {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 80vh;
+    padding: 100px;
+    background-color: var(--burder-bg-color);
+    opacity: 0.9;
+    backdrop-filter: blur(3px);
+    border-radius: 0px 0px 12px 12px;
+    overflow-y: auto;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  @include mobile {
+    padding: 50px;
+    height: 60vh;
+  }
+
   &__list {
     display: flex;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__item {
@@ -10,12 +37,28 @@
     font-size: 18px;
     line-height: 22px;
     color: var(--light-color);
+
+    @include tablet {
+      @include mr(0);
+
+      @include mb(20px);
+    }
   }
 
   &__link {
     position: relative;
     overflow: hidden;
     color: currentColor;
+
+    @include tablet {
+      font-size: 40px;
+      line-height: 58px;
+    }
+
+    @include mobile {
+      font-size: 32px;
+      line-height: 48px;
+    }
 
     &::after {
       content: "";
@@ -49,4 +92,8 @@
       color: var(--accent-color);
     }
   }
+}
+
+.nav.menu--active {
+  transform: none;
 }

@@ -29,25 +29,25 @@ if (programAccordions) {
 
 
 if (answersAccordions) {
-  const accordionAnswers1 = new Accordion('.accordion-answers--1', {
+  const accordionAnswers1 = new Accordion('.accordion-answers-1', {
     speed: 500,
     parent: answersAccordions,
     isControlEnabled: false,
   });
 
-  const accordionAnswers2 = new Accordion('.accordion-answers--2', {
+  const accordionAnswers2 = new Accordion('.accordion-answers-2', {
     speed: 500,
     parent: answersAccordions,
     isControlEnabled: false,
   });
 
-  const accordionAnswers3 = new Accordion('.accordion-answers--3', {
+  const accordionAnswers3 = new Accordion('.accordion-answers-3', {
     speed: 500,
     parent: answersAccordions,
     isControlEnabled: false,
   });
 
-  const accordionAnswers4 = new Accordion('.accordion-answers--4', {
+  const accordionAnswers4 = new Accordion('.accordion-answers-4', {
     speed: 500,
     parent: answersAccordions,
     isControlEnabled: false,

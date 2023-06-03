@@ -16,9 +16,23 @@
   transition: border 0.3s var(--animation-primary),
     background-position 0.3s var(--animation-primary);
 
+  @include mobile {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &:focus {
+    outline: 2px solid var(--disco-color);
+    outline-offset: 4px;
+  }
+
   @include hover {
     border-color: var(--accent-color);
     background-position: right;
+  }
+
+  &:active {
+    color: var(--purple-color);
   }
 
   &--stroke {

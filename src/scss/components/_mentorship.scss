@@ -17,21 +17,37 @@
     &--spec {
       background-image: url(../img/spec.svg);
       grid-column: 7 span;
+
+      @include small-tablet {
+        grid-column: 12 span;
+      }
     }
 
     &--seller {
       background-image: url(../img/seller.svg);
       grid-column: 5 span;
+
+      @include small-tablet {
+        grid-column: 12 span;
+      }
     }
 
     &--newbies {
       background-image: url(../img/newbies.svg);
       grid-column: 5 span;
+
+      @include small-tablet {
+        grid-column: 12 span;
+      }
     }
 
     &--managers {
       background-image: url(../img/managers.svg);
       grid-column: 7 span;
+
+      @include small-tablet {
+        grid-column: 12 span;
+      }
     }
   }
 

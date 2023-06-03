@@ -7,10 +7,10 @@
 
   &__accordions {
     margin-bottom: 100px;
-  }
 
-  &__accordion {
-    @include mb(30px);
+    @include small-tablet {
+      margin-bottom: 50px;
+    }
   }
 
   &__accordion {
@@ -20,6 +20,27 @@
     border: 1px solid var(--selago-color);
     box-shadow: 5px 10px 20px rgba(48, 3, 53, 0.1);
     border-radius: 20px;
+
+    @include mobile {
+      padding: 12px;
+    }
+
+    @include mb(30px);
+  }
+
+  .accordion__content {
+    height: 100%;
+    margin-bottom: 20px;
+  }
+
+  .accordion__wrapper {
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  .accordion__result {
+    height: 100%;
   }
 
   .accordion__control {
@@ -44,6 +65,15 @@
       background-size: cover;
       background-position: center;
       transition: rotate 0.3s ease, transform 0.3s ease;
+    }
+
+    &:focus {
+      outline: 2px solid var(--disco-color);
+      outline-offset: 4px;
+    }
+
+    &:active {
+      color: var(--accent-color);
     }
   }
 

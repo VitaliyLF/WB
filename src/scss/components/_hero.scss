@@ -1,9 +1,18 @@
 .hero {
   position: relative;
+  overflow: hidden;
   padding-top: 60px;
   padding-bottom: 146px;
   min-height: 757px;
   background-color: var(--violet-color);
+
+  @include tablet {
+    padding: 34px 0;
+  }
+
+  @include mobile {
+    min-height: auto;
+  }
 
   &::after {
     @include kf-scaleY;
@@ -25,7 +34,7 @@
 
     content: "";
     position: absolute;
-    top: 150px;
+    top: 250px;
     right: 100px;
     width: 430px;
     height: 430px;
@@ -37,6 +46,7 @@
 
   &__container {
     position: relative;
+    z-index: 1;
 
     &::before {
       content: "";
@@ -49,6 +59,22 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+
+      @include tablet {
+        top: 123px;
+        height: 725px;
+      }
+
+      @include small-tablet {
+        right: -100px;
+        z-index: -1;
+      }
+
+      @include mobile {
+        top: 100px;
+        width: 405px;
+        height: 505px;
+      }
     }
   }
 
@@ -68,6 +94,17 @@
     text-transform: uppercase;
     color: var(--light-color);
 
+    @include small-tablet {
+      font-size: 35px;
+      line-height: 52px;
+    }
+
+    @include mobile {
+      max-width: 300px;
+      font-size: 22px;
+      line-height: 29px;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -79,6 +116,13 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+
+      @include mobile {
+        width: 33px;
+        height: 33px;
+        bottom: -10px;
+        right: -10px;
+      }
     }
   }
 
@@ -89,6 +133,15 @@
     font-size: 24px;
     line-height: 29px;
     color: var(--light-color);
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 18px;
+    }
   }
 
   &__price {
@@ -99,6 +152,12 @@
     display: flex;
     align-items: flex-end;
     margin-bottom: 90px;
+
+    @include tablet {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
   }
 
   &__item {
@@ -109,6 +168,12 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    @include tablet {
+      @include mr(0);
+
+      @include mb(16px);
+    }
 
     &--circle {
       position: relative;
@@ -127,6 +192,10 @@
         background-size: cover;
         background-position: top left;
         animation: 10s linear infinite kf-rotating;
+      }
+
+      @include tablet {
+        display: none;
       }
     }
   }
@@ -158,7 +227,17 @@
   }
 
   &__btn {
-    @include mr(20px);
+    margin-right: 20px;
+
+    @include tablet {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    @include tablet {
+      display: none;
+    }
   }
 
   &__author {
@@ -172,6 +251,10 @@
     background-color: var(--disco-color);
     box-shadow: 4px 4px 0px 1px var(--loulou-color);
     border-radius: 10px;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__position {
