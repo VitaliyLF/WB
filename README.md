@@ -1,5 +1,5 @@
 
-# Наставничество на Wildberries[(Ссылка на проект)](https://vetosy.github.io/Beats-3)
+# Наставничество на Wildberries[(Ссылка на проект)](https://vetosy.github.io/WB/)
 
 
 
