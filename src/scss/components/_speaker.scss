@@ -4,6 +4,11 @@
   &__info {
     @include flex-all-sb;
 
+    @include tablet {
+      overflow: hidden;
+      flex-direction: column;
+    }
+
     position: relative;
     z-index: 1;
 
@@ -19,11 +24,20 @@
       filter: blur(85px);
       border-radius: 100%;
       z-index: -1;
+
+      @include tablet {
+        transform: none;
+      }
     }
   }
 
   &__content {
     max-width: 650px;
+
+    @include tablet {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
   }
 
   &__title {
@@ -35,6 +49,17 @@
     line-height: 58px;
     text-transform: uppercase;
     color: var(--violet-color);
+
+    @include small-tablet {
+      font-size: 32px;
+      line-height: 48px;
+    }
+
+    @include mobile {
+      margin-bottom: 30px;
+      font-size: 19px;
+      line-height: 29px;
+    }
   }
 
   &__item {

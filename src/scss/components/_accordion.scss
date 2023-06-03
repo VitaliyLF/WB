@@ -11,6 +11,11 @@
     background-size: 80px 80px;
     background-position: right bottom 16px;
     background-image: url(../img/accordion-icon-1.svg);
+
+    @include mobile {
+      background-size: 40px 40px;
+      background-position: top right;
+    }
   }
 
   &__module {
@@ -29,6 +34,11 @@
     font-size: 28px;
     line-height: 36px;
     color: var(--violet-color);
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 23px;
+    }
   }
 
   &__wrapper {
@@ -40,6 +50,11 @@
     padding-top: 20px;
     padding-bottom: 58px;
     margin-right: 20px;
+
+    @include mobile {
+      margin-right: 0;
+      padding: 0 0 20px;
+    }
   }
 
   &__topics-subtitle {
@@ -50,6 +65,11 @@
     font-size: 24px;
     line-height: 31px;
     color: var(--violet-color);
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 23px;
+    }
   }
 
   &__topics-list {
@@ -101,6 +121,11 @@
     font-size: 24px;
     line-height: 31px;
     color: var(--light-color);
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 23px;
+    }
   }
 
   &__result-item {
@@ -112,6 +137,10 @@
     font-size: 18px;
     line-height: 23px;
     color: var(--light-color);
+
+    @include mobile {
+      font-size: 16px;
+    }
 
     &::before {
       content: "";

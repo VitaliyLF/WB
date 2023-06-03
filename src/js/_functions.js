@@ -21,7 +21,7 @@
 // import './functions/fix-fullheight';
 
 // Реализация бургер-меню
-// import { burger } from './functions/burger';
+// import { burger } from '../functions/burger';
 
 // Подключение аккордеона
 // import {Accordion} from '../functions/accordion';

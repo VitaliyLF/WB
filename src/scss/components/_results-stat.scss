@@ -5,6 +5,15 @@
   border-radius: 20px;
   padding: 50px 100px;
 
+  @include small-tablet {
+    padding: 50px;
+  }
+
+  @include mobile {
+    padding: 20px;
+    padding-bottom: 40px;
+  }
+
   &__title {
     margin: 0;
     margin-bottom: 40px;
@@ -13,6 +22,10 @@
     font-size: 24px;
     line-height: 31px;
     color: var(--violet-color);
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
   }
 
   &__image {
@@ -41,6 +54,15 @@
       pointer-events: none;
       opacity: 0.5;
     }
+
+    &:focus {
+      outline: 2px solid var(--disco-color);
+      outline-offset: 4px;
+    }
+
+    &:active {
+      color: var(--accent-color);
+    }
   }
 
   &__btn-next {
@@ -49,6 +71,13 @@
     right: 50px;
     transform: translateY(-50%);
     z-index: 10;
+
+    @include small-tablet {
+      top: auto;
+      right: 40%;
+      bottom: 15px;
+      transform: none;
+    }
   }
 
   &__btn-prev {
@@ -57,14 +86,25 @@
     left: 50px;
     transform: translateY(-50%);
     z-index: 10;
+
+    @include small-tablet {
+      top: auto;
+      left: 40%;
+      bottom: 15px;
+      transform: none;
+    }
   }
 }
 
 .results-stat__nav {
   overflow: hidden;
 
+  @include small-tablet {
+    display: none;
+  }
+
   &-image {
-    display: inline-block;
+    display: block;
     border: 1px solid var(--electric-color);
     border-radius: 4px;
   }

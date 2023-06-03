@@ -5,6 +5,10 @@
 
   &__accordions {
     margin-bottom: 100px;
+
+    @include small-tablet {
+      margin-bottom: 50px;
+    }
   }
 
   .accordion__title {
@@ -12,6 +16,18 @@
     font-size: 24px;
     line-height: 31px;
     color: var(--violet-color);
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 23px;
+    }
+  }
+
+  .accordion__descr {
+    @include mobile {
+      font-size: 16px;
+      line-height: 23px;
+    }
   }
 
   .accordion__icon {
@@ -54,6 +70,11 @@
     padding: 30px 72px 30px 20px;
     text-align: left;
     border-bottom: 1px solid var(--accent-color);
+
+    @include mobile {
+      padding: 20px;
+      padding-right: 72px;
+    }
   }
 
   .accordion__descr {

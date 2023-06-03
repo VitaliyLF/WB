@@ -114,6 +114,10 @@ a {
 
 .section-offset {
   padding: 100px 0;
+
+  @include small-tablet {
+    padding: 50px 0;
+  }
 }
 
 .grid {
@@ -130,4 +134,30 @@ a {
   line-height: 58px;
   text-transform: uppercase;
   color: var(--meteorite-color);
+
+  @include small-tablet {
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+  @include mobile {
+    font-size: 20px;
+    line-height: 29px;
+  }
+}
+
+.burger {
+  @include burger;
+
+  --burger-width: 36px;
+  --burger-height: 32px;
+  --burger-line-height: 3px;
+
+  display: none;
+  color: var(--accent-color);
+  z-index: 101;
+
+  @include tablet {
+    display: block;
+  }
 }

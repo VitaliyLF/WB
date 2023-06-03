@@ -38,7 +38,12 @@ const tariffsItems = document.querySelector('.tariffs__items')
 
 if (tariffsItems) {
   const tariffsSlider = new Swiper(tariffsItems, {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 20,
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+      }
+    }
   });
 }

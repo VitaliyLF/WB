@@ -2,10 +2,22 @@
   padding-top: 100px;
   background-color: var(--light-color);
 
+  @include small-tablet {
+    padding-top: 50px;
+  }
+
   &__container {
     padding: 48px 116px 62px;
     background: #21093a;
     border-radius: 20px;
+
+    @include tablet {
+      padding: 48px;
+    }
+
+    @include mobile {
+      padding: 20px;
+    }
   }
 
   &__title {
@@ -21,6 +33,10 @@
     border-radius: 16px;
     grid-column: 6 span;
     z-index: 1;
+
+    @include small-tablet {
+      grid-column: 12 span;
+    }
 
     &::after {
       content: "";
