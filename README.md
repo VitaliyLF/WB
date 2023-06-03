@@ -10,7 +10,7 @@
 
 [![My Skills](https://skillicons.dev/icons?i=js,html,scss,figma,gulp,)](https://skillicons.dev)
 
-## :clipboard: Что я реализовал
+## :clipboard: Что я реализовал:
 - Pixel Perfect
 - Анимаций гридента
 - Зеленая зона The W3C Markup Validation
