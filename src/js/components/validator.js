@@ -11,6 +11,14 @@ const rules1 = [{
     }]
   },
   {
+    ruleSelector: '.input-link',
+    rules: [{
+      rule: 'required',
+      value: true,
+      errorMessage: 'Заполните поле!'
+    }]
+  },
+  {
     ruleSelector: '.input-tel',
     tel: true,
     telError: 'Введите корректный телефон',
