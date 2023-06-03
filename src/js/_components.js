@@ -4,3 +4,4 @@ import './components/fslightbox';
 import './components/smooth-scroll';
 import './components/burger';
 import './components/validator';
+import './components/aos';
