@@ -1,5 +1,6 @@
-
 # Наставничество на Wildberries [(Ссылка на проект)](https://vetosy.github.io/WB/)
+
+<a href="https://vetosy.github.io/WB/"><img src="https://i.ibb.co/1GBWWDt/portfolio-4-2x.jpg" alt="portfolio-4-2x" border="0"></a>
 
 ## 🛠 Что я использовал:
 - HTML5
